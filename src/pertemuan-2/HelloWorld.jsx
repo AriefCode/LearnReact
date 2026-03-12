@@ -10,22 +10,24 @@ export default function HelloWorld() {
       <p>Selamat belajar ReactJS</p>
       <GreetingDuri />
       <QuoteText />
-      <UserCard
-        // CARA GANTENG
-        {...propsUserCard}
+      <div className="img-card">
+        <UserCard
+          // CARA GANTENG
+          {...propsUserCard}
 
-        // CARA GA GANTENG
-        // nama={propsUserCard.nama}
-        // nim={propsUserCard.nim}
-        // tanggal={propsUserCard.tanggal}
+          // CARA GA GANTENG
+          // nama={propsUserCard.nama}
+          // nim={propsUserCard.nim}
+          // tanggal={propsUserCard.tanggal}
 
-        // CARA BIASA
-        // nama= "Arief"
-        // nim="2455301093"
-        // tanggal={new Date().toLocaleDateString()}
-      />
+          // CARA BIASA
+          // nama= "Arief"
+          // nim="2455301093"
+          // tanggal={new Date().toLocaleDateString()}
+        />
 
-      <img src="img/wondie.jpg" alt="wondie cantiks" />
+        <img src="img/wondie.jpg" alt="wondie cantiks" />
+      </div>
     </div>
   );
 }
