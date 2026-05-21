@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "nama": "Nasi Goreng Spesial",
+    "harga": 35000,
+    "category": "biryani",
+    "bestSeller": true
+  },
+  {
+    "id": 2,
+    "nama": "Ayam Bakar Madu",
+    "harga": 45000,
+    "category": "butter-chicken",
+    "bestSeller": true
+  },
+  {
+    "id": 3,
+    "nama": "Soto Betawi",
+    "harga": 32000,
+    "category": "dosa"
+  },
+  {
+    "id": 4,
+    "nama": "Gado-Gado Sedap",
+    "harga": 28000,
+    "category": "samosa"
+  },
+  {
+    "id": 5,
+    "nama": "Rendang Daging",
+    "harga": 55000,
+    "category": "burger",
+    "bestSeller": true
+  },
+  {
+    "id": 6,
+    "nama": "Es Cendol Durian",
+    "harga": 18000,
+    "category": "idly"
+  },
+  {
+    "id": 7,
+    "nama": "Pizza Margherita",
+    "harga": 52000,
+    "category": "pizza"
+  },
+  {
+    "id": 8,
+    "nama": "Spaghetti Carbonara",
+    "harga": 48000,
+    "category": "pasta"
+  },
+  {
+    "id": 9,
+    "nama": "Biryani Ayam Kampung",
+    "harga": 42000,
+    "category": "biryani"
+  },
+  {
+    "id": 10,
+    "nama": "Dosa Masala",
+    "harga": 30000,
+    "category": "dosa"
+  },
+  {
+    "id": 11,
+    "nama": "Samosa Isi Kentang",
+    "harga": 22000,
+    "category": "samosa"
+  },
+  {
+    "id": 12,
+    "nama": "Burger Keju Spesial",
+    "harga": 38000,
+    "category": "burger"
+  }
+]

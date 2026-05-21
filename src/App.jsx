@@ -12,6 +12,8 @@ const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
 const Login = React.lazy(() => import("./pages/auth/Login"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
+const GuestLayout = React.lazy(() => import("./layouts/GuestLayout"));
+const Landing = React.lazy(() => import("./pages/Landing"));
 
 function App() {
   return (
@@ -28,6 +30,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/Forgot" element={<Forgot />} />
           <Route path="/Register" element={<Register />} />
+        </Route>
+
+        <Route element={<GuestLayout />}>
+          <Route path="/guest" element={<Landing />} />
         </Route>
       </Routes>
     </Suspense>
