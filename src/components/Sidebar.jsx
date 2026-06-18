@@ -35,33 +35,27 @@ export default function Sidebar() {
       <div id="sidebar-menu" className="mt-10">
         <ul id="menu-list" className="space-y-3">
           <li>
-            <NavLink
-              to="/"
-              id="menu-1"
-              className={menuClass}
-            >
+            <NavLink to="/" id="menu-1" className={menuClass}>
               <MdDashboard className="mr-4 text-xl" />
               Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/orders"
-              id="menu-2"
-              className={menuClass}
-            >
+            <NavLink to="/orders" id="menu-2" className={menuClass}>
               <GiFoodTruck className="mr-4 text-xl" />
               Orders
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/customers"
-              id="menu-3"
-              className={menuClass}
-            >
+            <NavLink to="/customers" id="menu-3" className={menuClass}>
               <BsPeopleFill className="mr-4 text-xl" />
               Customers
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/notes" id="menu-4" className={menuClass}>
+              <BsPeopleFill className="mr-4 text-xl" />
+              Notes
             </NavLink>
           </li>
         </ul>
