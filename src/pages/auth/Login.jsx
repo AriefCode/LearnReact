@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useState } from "react";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
 import { ImSpinner2 } from "react-icons/im";
 import { useNavigate } from "react-router-dom";
+import { authAPI } from "../../services/authAPI";
 
 export default function Login() {
   //navigate, state & handleChange
@@ -29,31 +29,28 @@ export default function Login() {
     setLoading(true);
     setError(false);
 
-    axios   
-      .post("https://dummyjson.com/user/login", {
-        username: dataForm.email,
-        password: dataForm.password,
-      })
-      .then((response) => {
-        // Jika status bukan 200, tampilkan pesan error
-        if (response.status !== 200) {
-          setError(response.data.message);
-          return;
-        }
+    try {
+      const data = await authAPI.login(dataForm.email, dataForm.password);
 
-        // Redirect ke dashboard jika login sukses
-        navigate("/");
-      })
-      .catch((err) => {
-        if (err.response) {
-          setError(err.response.data.message || "An error occurred");
-        } else {
-          setError(err.message || "An unknown error occurred");
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+      // Simpan data user kalau dibutuhkan nanti
+      console.log("Login berhasil:", data);
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      // Redirect ke dashboard jika login sukses
+      navigate("/");
+    } catch (err) {
+      if (err.response) {
+        setError(
+          err.response.data.error_description ||
+            err.response.data.msg ||
+            "Email atau password salah",
+        );
+      } else {
+        setError(err.message || "An unknown error occurred");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   //error & loading status
